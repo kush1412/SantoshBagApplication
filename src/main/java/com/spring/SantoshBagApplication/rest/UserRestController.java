@@ -34,7 +34,7 @@ public class UserRestController {
 	
 	@GetMapping("/users/{userId}")
 	public User getUser(@PathVariable int userId) {
-		
+		System.out.println("get method is being called for user id "+userId);
 		User user = userService.findById(userId);
 		
 		if (user == null) {
